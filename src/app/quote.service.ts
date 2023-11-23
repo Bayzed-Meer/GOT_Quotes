@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class QuoteService {
-  private apiUrl = 'https://api.gameofthronesquotes.xyz/v1/random/5';
+  private apiUrl = 'https://api.gameofthronesquotes.xyz/v1/random/6';
 
   constructor(private http: HttpClient) {}
 
