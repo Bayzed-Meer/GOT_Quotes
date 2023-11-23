@@ -1,2 +1,2 @@
 #Task2-Industial Attachment SELISE
-![Alt Text](./task2.png)
+![Alt Text](./Task2.png)
