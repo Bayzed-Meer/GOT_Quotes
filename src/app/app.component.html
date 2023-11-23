@@ -1,37 +1,20 @@
-<div class="mat-form">
-  <form #myForm="ngForm" (ngSubmit)="submitForm()" class="custom-form">
-    <div class="form-header">
-      <h2>Submit Your Information</h2>
-    </div>
-    <mat-form-field appearance="outline" class="form-field">
-      <mat-label>Name</mat-label>
-      <input
-        matInput
-        placeholder="Enter your name"
-        name="name"
-        [(ngModel)]="formData.name"
-        required
-      />
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" class="form-field">
-      <mat-label>Email</mat-label>
-      <input
-        matInput
-        placeholder="Enter your email"
-        name="email"
-        [(ngModel)]="formData.email"
-        required
-      />
-    </mat-form-field>
-
-    <button mat-raised-button color="primary" type="submit">Submit</button>
-
-    <div *ngIf="isSubmitted">
-      <p>Name: {{ formData.name }}</p>
-      <p>Email: {{ formData.email }}</p>
-    </div>
-  </form>
+<div class="navbar">
+  <ul fxLayout="row" fxLayoutAlign="space-between center">
+    <li><img [src]="imageUrl" alt="GOT_LOGO" /></li>
+    <li>
+      <button mat-button routerLink="/">Home</button>
+      <button mat-button routerLink="/quotes">Quotes</button>
+      <button mat-button routerLink="/about">About</button>
+      <button mat-button routerLink="/contact">Contact</button>
+    </li>
+    <li>
+      <div class="search-box">
+        <input type="text" placeholder="Type to Search..." />
+        <div class="search-icon">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
-
-<app-quote [quotes]="quotesFromApi"></app-quote>
+<router-outlet></router-outlet>
